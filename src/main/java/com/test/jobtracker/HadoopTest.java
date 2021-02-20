@@ -18,6 +18,7 @@ public class HadoopTest {
 			/*Prepare the data set*/
 			try {
 				HdfsOperationUtils.deleteFiles(outputfilePath);
+				HdfsOperationUtils.deleteHdfsFiles(inputHdfsPath);
 				HdfsOperationUtils.uploadFiles(localFilePath, inputHdfsPath);
 			} catch (IOException e) {
 				e.printStackTrace();
